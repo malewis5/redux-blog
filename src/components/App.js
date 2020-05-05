@@ -1,5 +1,10 @@
 import React from "react";
+import PostList from "../components/PostList";
 
 export function App() {
-  return <div>App</div>;
+  return (
+    <div className="ui container">
+      <PostList />
+    </div>
+  );
 }
