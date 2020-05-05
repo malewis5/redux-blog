@@ -1,6 +1,6 @@
 import { combineReducers } from "redux";
 
-const testReducer = (state = "", action) => {
+const fetchPosts = (state = "", action) => {
   switch (action.type) {
     case "TEST":
       console.log("Fire me up");
@@ -13,5 +13,5 @@ const testReducer = (state = "", action) => {
 };
 
 export default combineReducers({
-  testReducer,
+  fetchPosts,
 });

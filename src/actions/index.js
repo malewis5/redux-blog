@@ -1,6 +1,5 @@
-export const test = (input) => {
+export function fetchPosts() {
   return {
-    type: "TEST",
-    payload: input,
+    type: "FETCH_POSTS",
   };
-};
+}

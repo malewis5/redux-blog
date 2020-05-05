@@ -1,12 +1,11 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { test } from "../actions";
+import { fetchPosts } from "../actions";
 
 export default function PostList() {
   const dispatch = useDispatch();
-  const input = useSelector((testReducer) => testReducer.state);
-  useEffect(() => {
-    dispatch(test("test"));
-  }, []);
-  return <div>{input}</div>;
+  const posts = useSelector((state) => state.posts);
+  // eslint-disable-next-line
+  useEffect(() => dispatch(fetchPosts), []);
+  return <div>Post List</div>;
 }
